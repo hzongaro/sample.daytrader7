@@ -20,9 +20,11 @@ import javax.decorator.Decorator;
 import javax.decorator.Delegate;
 import javax.inject.Inject;
 import javax.interceptor.Interceptor;
+import javax.enterprise.inject.Typed;
 
 @Decorator
 @Priority(Interceptor.Priority.APPLICATION)
+@Typed(PingEJBIFace.class)
 public class PingEJBLocalDecorator implements PingEJBIFace {
 
     /*
